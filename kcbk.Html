@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCBK - Smart Portal</title>
+    <!-- Google Fonts for High Readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        :root {
+            --primary: #1e3a8a; /* Professional Blue */
+            --primary-light: #eff6ff;
+            --accent: #2563eb;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Navigation Header */
+        .navbar {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo span {
+            background: var(--primary);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        /* Hero / Welcome Banner */
+        .welcome-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-card h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-card p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        /* Grid Action Cards */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--accent);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .card-btn:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            .nav-links a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="brand-logo">
+            <span>KCBK</span> Portal
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        
+        <!-- Welcome Banner -->
+        <section class="welcome-card">
+            <h1>Welcome to KCBK Web Hub</h1>
+            <p></p>
+        </section>
+
+        <!-- Quick Access Cards -->
+        <section class="grid-cards">
+            
+            <div class="card">
+                <h3>Visit & Entry</h3>
+                <p>यहाँ आप अपने सभी रिकॉर्ड्स और दैनिक गतिविधियों को आसानी से मैनेज कर सकते हैं।</p>
+                <a href="https://script.google.com/macros/s/AKfycbzjyK_ovDywbOwTqClhem6HE5-bRMJglrUYB5Alprjmi0daYIAfevO6AalxbRW09drbGg/exec" class="card-btn">Open &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>Billing</h3>
+                <p>सभी सर्विस लिस्ट और डिटेल्स को क्लियर और रिडेबल फॉर्मेट में देखें।</p>
+                <a href="#" class="card-btn">View Services &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>Quick Links</h3>
+                <p>अपने बाहरी (External) या आंतरिक (Internal) वेब ऐप लिंक्स को यहाँ कनेक्ट करें।</p>
+                <a href="#" class="card-btn">Access Links &rarr;</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        // Web App Link Handling Script
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("KCBK Portal Ready!");
+            
+            // आप यहाँ अपने specific App links / Firebase / API कनेक्ट कर सकते हैं
+        });
+    </script>
+</body>
+</html>
